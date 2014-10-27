@@ -1,5 +1,6 @@
 自用工具，挖坑待填
 ==================
+这些都是我在工作中积累到的工具，方便自己取用。<p>
 #BitmapTool
 压缩图片，设置图片方向
 #DataPackTool
@@ -8,4 +9,5 @@
 根据发布版本（debug/release）开关打印Log
 #ToastTool
 便捷的土司工具
-
+#AppInfoTool
+便捷的方式获得应用的版本信息等

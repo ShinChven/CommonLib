@@ -28,6 +28,7 @@ public class BitmapTool {
         final BitmapFactory.Options options = new BitmapFactory.Options();
         options.inJustDecodeBounds = true;
 
+        // SCHEME 判断类型
         if (uri.getScheme().equals(SCHEME_CONTENT)) {
             BitmapFactory.decodeStream(context.getContentResolver().openInputStream(uri), null, options);
         } else if (uri.getScheme().equals(SCHEME_FILE)) {
@@ -53,6 +54,7 @@ public class BitmapTool {
 
     /**
      * 获取图片存储位置，并根据方向反转图片
+     *
      * @param context
      * @param uri
      * @param bitmap
@@ -80,6 +82,7 @@ public class BitmapTool {
 
     /**
      * 反转图片
+     *
      * @param bitmap
      * @param orientation
      * @return

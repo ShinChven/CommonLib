@@ -10,26 +10,43 @@ import android.media.ExifInterface;
 import android.net.Uri;
 import android.provider.MediaStore;
 
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 
 /**
  * Created by ShinChven on 2014/10/21.
  */
 public class BitmapTool {
+    private static final String SCHEME_CONTENT = "content";
+    private static final String SCHEME_FILE = "file";
+
     public static Bitmap zip(Context context, Uri uri,
                              int reqWidth, int reqHeight) throws IOException {
 
         // First decode with inJustDecodeBounds=true to check dimensions  开启测量模式
         final BitmapFactory.Options options = new BitmapFactory.Options();
         options.inJustDecodeBounds = true;
-        BitmapFactory.decodeStream(context.getContentResolver().openInputStream(uri), null, options);
+
+        if (uri.getScheme().equals(SCHEME_CONTENT)) {
+            BitmapFactory.decodeStream(context.getContentResolver().openInputStream(uri), null, options);
+        } else if (uri.getScheme().equals(SCHEME_FILE)) {
+            BitmapFactory.decodeStream(new FileInputStream(new File(uri.getPath())), null, options);
+        }
+
 
         // Calculate inSampleSize  计算预览比例
         options.inSampleSize = calculateInSampleSize(options, reqWidth, reqHeight);
 
         // Decode bitmap with inSampleSize set 按照预览比例载入bitmap
         options.inJustDecodeBounds = false;
-        Bitmap bitmap = BitmapFactory.decodeStream(context.getContentResolver().openInputStream(uri), null, options);
+        Bitmap bitmap = null;
+        if (uri.getScheme().equals(SCHEME_CONTENT)) {
+            bitmap = BitmapFactory.decodeStream(context.getContentResolver().openInputStream(uri), null, options);
+        } else if (uri.getScheme().equals(SCHEME_FILE)) {
+            bitmap = BitmapFactory.decodeStream(new FileInputStream(new File(uri.getPath())), null, options);
+        }
+
         bitmap = getRotatedBitmap(context, uri, bitmap);
         return bitmap;
     }

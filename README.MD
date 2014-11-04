@@ -3,6 +3,8 @@
 这些都是我在工作中积累到的工具，方便自己取用。<p>
 #BitmapTool
 压缩图片，设置图片方向
+#DisplayTool
+显示高宽工具
 #DataPackTool
 数据打包
 #LogTool

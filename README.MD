@@ -25,7 +25,8 @@
 <a href="https://github.com/ShinChven/CommonTools/blob/master/CommonTools/src/main/java/com/github/ShinChven/lib/CommonTools/ViewHolder.java">
 这是同事摘抄自网上的反射版ViewHolder</a>
 ##Material ActionBar Color settings 
-<a href="">配置Material Design 风格的ActionBar</a>
+<a href="https://github.com/ShinChven/CommonTools/blob/master/CommonTools/src/main/res/values/themes.xml">
+配置Material Design 风格的ActionBar</a>
 ##AppInfoTool
 <a href="https://github.com/ShinChven/CommonTools/blob/master/CommonTools/src/main/java/com/github/ShinChven/lib/CommonTools/AppInfoTool.java">
 获取应用程序的一些信息，比如版本号，版本序列

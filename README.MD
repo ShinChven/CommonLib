@@ -31,3 +31,11 @@
 <a href="https://github.com/ShinChven/CommonTools/blob/master/CommonTools/src/main/java/com/github/ShinChven/lib/CommonTools/AppInfoTool.java">
 获取应用程序的一些信息，比如版本号，版本序列
 </a>
+##AESEncryptTool
+<a href="https://github.com/ShinChven/CommonTools/blob/master/CommonTools/src/main/java/com/github/ShinChven/lib/CommonTools/AESEncryptTool.java">
+AES 加密工具
+</a>
+##IMETool
+<a href="https://github.com/ShinChven/CommonTools/blob/master/CommonTools/src/main/java/com/github/ShinChven/lib/CommonTools/IMETool.java">
+关闭输入法
+</a>

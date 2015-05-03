@@ -2,10 +2,14 @@ package com.github.ShinChven.lib.CommonLib.tool;
 
 /**
  * Created by ShinChven on 15/4/30.
+ * 结构工具
  * 请查看 demo 方法
  */
 public class ValidateHandler {
 
+    /**
+     * demo，不要使用这里的代码
+     */
     public static void demo() {
         new ValidateHandler(yourValidateMethod(), new Runnable() {
             @Override
@@ -16,7 +20,7 @@ public class ValidateHandler {
     }
 
     /**
-     * demo method
+     * demo method，不要使用这里的方法
      * @return
      */
     private static boolean yourValidateMethod() {
@@ -29,12 +33,12 @@ public class ValidateHandler {
 
     /**
      *
-     * @param validate
+     * @param validation 传入完全人验证，建议传入返回BOOLEAN 值的方法
      * @param onGoing
      */
-    public ValidateHandler(boolean validate, Runnable onGoing) {
+    public ValidateHandler(boolean validation, Runnable onGoing) {
         this.onGoing = onGoing;
-        this.validate = validate;
+        this.validate = validation;
     }
 
     public Runnable getOnGoing() {

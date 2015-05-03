@@ -9,7 +9,7 @@
 ViewTopMarginAnimation.java
 </a>：改变上边距的扩展动画，通常在调用ActionBar 隐藏时使用
 
-##PageTransformer
+## PageTransformer
 <a href="https://github.com/ShinChven/CommonLib/blob/master/CommonLib/src/main/java/com/github/ShinChven/lib/CommonLib/pagetransformer/DepthPageTransformer.java">
 DepthPageTransformer.java
 </a>
@@ -22,7 +22,7 @@ SupportDepthPageTransformer.java
 ZoomOutPageTransformer.java
 </a>
 
-##工具
+## 工具
 
 <a href="https://github.com/ShinChven/CommonLib/blob/master/CommonLib/src/main/java/com/github/ShinChven/lib/CommonLib/utils/ActivitySwitchAnimator.java">
 ActivitySwitchAnimator.java
@@ -99,3 +99,7 @@ VolleyRequest.java
     themes.xml
 </a>：配置Material Design 的ActionBar 颜色
 
+## 脚本
+<a href="https://github.com/ShinChven/CommonLib/blob/master/localproperties.sh">
+    localproperties.sh
+</a>：生成local.properties 文件，并制定android SDK路径

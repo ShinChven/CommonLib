@@ -1,4 +1,4 @@
-package com.github.ShinChven.lib.CommonLib.tool;
+package com.github.ShinChven.lib.CommonLib.utils;
 
 import android.app.Activity;
 import com.github.ShinChven.lib.CommonLib.R;
@@ -55,7 +55,7 @@ public class ActivitySwitchAnimator {
         try {
             thisActivity.overridePendingTransition(R.anim.abc_slide_in_bottom, R.anim.abc_fade_out);
         } catch (Exception e) {
-            LogTool.printStackTrace(e);
+            LogUtil.printStackTrace(e);
         }
     }
 

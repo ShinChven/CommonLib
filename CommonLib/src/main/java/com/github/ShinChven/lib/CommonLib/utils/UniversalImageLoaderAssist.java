@@ -1,4 +1,4 @@
-package com.github.ShinChven.lib.CommonLib.tool;
+package com.github.ShinChven.lib.CommonLib.utils;
 
 import android.content.Context;
 import android.graphics.Bitmap;

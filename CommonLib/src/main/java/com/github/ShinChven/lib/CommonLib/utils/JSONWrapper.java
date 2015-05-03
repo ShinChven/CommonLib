@@ -1,5 +1,6 @@
-package com.github.ShinChven.lib.CommonLib.tool;
+package com.github.ShinChven.lib.CommonLib.utils;
 
+import com.github.ShinChven.lib.CommonLib.Constants;
 import org.json.JSONObject;
 
 /**
@@ -22,7 +23,7 @@ public class JSONWrapper {
         try {
             return this.jo.getString(key);
         } catch (Exception e) {
-            LogTool.printStackTrace(e);
+            LogUtil.printStackTrace(e);
             return Constants.EMPTY;
         }
     }
@@ -31,7 +32,7 @@ public class JSONWrapper {
         try {
             return this.jo.getString(key);
         } catch (Exception e) {
-            LogTool.printStackTrace(e);
+            LogUtil.printStackTrace(e);
             return defaultVal;
         }
     }
@@ -40,7 +41,7 @@ public class JSONWrapper {
         try {
             return this.jo.getInt(key);
         } catch (Exception e) {
-            LogTool.printStackTrace(e);
+            LogUtil.printStackTrace(e);
             return 0;
         }
     }
@@ -49,7 +50,7 @@ public class JSONWrapper {
         try {
             return this.jo.getInt(key);
         } catch (Exception e) {
-            LogTool.printStackTrace(e);
+            LogUtil.printStackTrace(e);
             return defaultVal;
         }
     }
@@ -58,7 +59,7 @@ public class JSONWrapper {
         try {
             return this.jo.getBoolean(key);
         } catch (Exception e) {
-            LogTool.printStackTrace(e);
+            LogUtil.printStackTrace(e);
             return defaultVal;
         }
     }
@@ -67,7 +68,7 @@ public class JSONWrapper {
         try {
             return this.jo.getBoolean(key);
         } catch (Exception e) {
-            LogTool.printStackTrace(e);
+            LogUtil.printStackTrace(e);
             return null;
         }
     }
@@ -76,7 +77,7 @@ public class JSONWrapper {
         try {
             return this.jo.getDouble(key);
         } catch (Exception e) {
-            LogTool.printStackTrace(e);
+            LogUtil.printStackTrace(e);
             return 0;
         }
     }
@@ -85,7 +86,7 @@ public class JSONWrapper {
         try {
             return this.jo.getDouble(key);
         } catch (Exception e) {
-            LogTool.printStackTrace(e);
+            LogUtil.printStackTrace(e);
             return defaultVal;
         }
     }
@@ -94,7 +95,7 @@ public class JSONWrapper {
         try {
             return this.jo.getLong(key);
         } catch (Exception e) {
-            LogTool.printStackTrace(e);
+            LogUtil.printStackTrace(e);
             return 0;
         }
     }
@@ -103,7 +104,7 @@ public class JSONWrapper {
         try {
             return this.jo.getLong(key);
         } catch (Exception e) {
-            LogTool.printStackTrace(e);
+            LogUtil.printStackTrace(e);
             return defaultVal;
         }
     }

@@ -1,4 +1,4 @@
-package com.github.ShinChven.lib.CommonLib.tool;
+package com.github.ShinChven.lib.CommonLib.utils;
 
 import org.json.JSONObject;
 
@@ -11,7 +11,7 @@ import java.io.IOException;
  * Created by ShinChven on 2014/10/24.
  * 打包数据
  */
-public class DataPackTool {
+public class DataPackUtil {
 
 
     /**

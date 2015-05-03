@@ -1,4 +1,4 @@
-package com.github.ShinChven.lib.CommonLib.tool;
+package com.github.ShinChven.lib.CommonLib.utils;
 
 import android.util.Base64;
 
@@ -8,7 +8,7 @@ import javax.crypto.spec.SecretKeySpec;
 /**
  * Created by ShinChven on 15/4/29.
  */
-public class AESEncryptTool {
+public class AESEncryptUtil {
 
 
     public static final String LOG_TAG = "AES_ENCRYPTOR";
@@ -23,11 +23,11 @@ public class AESEncryptTool {
      */
     public static String encrypt(String sSrc, String sKey) throws Exception {
         if (sKey == null) {
-            LogTool.i(LOG_TAG, "AES_KEY 不能为null");
+            LogUtil.i(LOG_TAG, "AES_KEY 不能为null");
             return null;
         }
         if (sKey.length() != 16) {
-            LogTool.i(LOG_TAG, "AES_KEY 长度应该为16位");
+            LogUtil.i(LOG_TAG, "AES_KEY 长度应该为16位");
             return null;
         }
         byte[] raw = sKey.getBytes("utf-8");
@@ -52,11 +52,11 @@ public class AESEncryptTool {
     public static String decrypt(String sSrc, String sKey) throws Exception {
         try {
             if (sKey == null) {
-                LogTool.i(LOG_TAG, "AES_KEY 不能为null");
+                LogUtil.i(LOG_TAG, "AES_KEY 不能为null");
                 return null;
             }
             if (sKey.length() != 16) {
-                LogTool.i(LOG_TAG, "AES_KEY 长度应该为16位");
+                LogUtil.i(LOG_TAG, "AES_KEY 长度应该为16位");
                 return null;
             }
             byte[] raw = sKey.getBytes("utf-8");
@@ -71,11 +71,11 @@ public class AESEncryptTool {
                 String originalString = new String(originalData, "utf-8");
                 return originalString;
             } catch (Exception e) {
-                LogTool.printStackTrace(e);
+                LogUtil.printStackTrace(e);
                 return null;
             }
         } catch (Exception ex) {
-            LogTool.printStackTrace(ex);
+            LogUtil.printStackTrace(ex);
             return null;
         }
     }

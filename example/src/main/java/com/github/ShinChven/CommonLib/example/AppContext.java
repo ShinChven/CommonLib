@@ -1,7 +1,7 @@
 package com.github.ShinChven.CommonLib.example;
 
 import android.app.Application;
-import com.github.ShinChven.lib.CommonLib.tool.LogTool;
+import com.github.ShinChven.lib.CommonLib.utils.LogUtil;
 import com.github.ShinChven.lib.CommonLib.example.BuildConfig;
 
 /**
@@ -12,6 +12,6 @@ public class AppContext extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        LogTool.init(BuildConfig.DEBUG, "CommonTools");
+        LogUtil.init(BuildConfig.DEBUG, "CommonTools");
     }
 }

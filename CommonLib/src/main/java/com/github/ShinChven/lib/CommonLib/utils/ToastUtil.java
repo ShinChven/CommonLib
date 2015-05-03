@@ -1,4 +1,4 @@
-package com.github.ShinChven.lib.CommonLib.tool;
+package com.github.ShinChven.lib.CommonLib.utils;
 
 import android.content.Context;
 import android.widget.Toast;
@@ -6,12 +6,12 @@ import android.widget.Toast;
 /**
  * Created by ShinChven on 14/5/28.
  */
-public class ToastTool {
+public class ToastUtil {
     public static void toastShortly(Context context, int content) {
         try {
             Toast.makeText(context, content, Toast.LENGTH_SHORT).show();
         } catch (Exception e) {
-           LogTool.printStackTrace(e);
+           LogUtil.printStackTrace(e);
         }
     }
 
@@ -19,7 +19,7 @@ public class ToastTool {
         try {
             Toast.makeText(context, content, Toast.LENGTH_SHORT).show();
         } catch (Exception e) {
-            LogTool.printStackTrace(e);
+            LogUtil.printStackTrace(e);
         }
     }
 
@@ -27,7 +27,7 @@ public class ToastTool {
         try {
             Toast.makeText(context, content, Toast.LENGTH_LONG).show();
         } catch (Exception e) {
-            LogTool.printStackTrace(e);
+            LogUtil.printStackTrace(e);
         }
     }
 
@@ -35,7 +35,7 @@ public class ToastTool {
         try {
             Toast.makeText(context, content, Toast.LENGTH_LONG).show();
         } catch (Exception e) {
-            LogTool.printStackTrace(e);
+            LogUtil.printStackTrace(e);
         }
     }
 

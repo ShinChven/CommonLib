@@ -1,4 +1,4 @@
-package com.github.ShinChven.lib.CommonLib.tool;
+package com.github.ShinChven.lib.CommonLib.utils;
 
 import android.content.Context;
 import android.content.pm.PackageInfo;
@@ -8,7 +8,7 @@ import android.content.pm.PackageManager;
  * Created by ShinChven on 14/9/3.
  * 获取应用的信息
  */
-public class AppInfoTool {
+public class AppInfoUtil {
     /**
      * 获取应用版本号 versionCode
      *

@@ -1,4 +1,4 @@
-package com.github.ShinChven.lib.CommonLib.tool;
+package com.github.ShinChven.lib.CommonLib.volley;
 
 import com.android.volley.NetworkResponse;
 import com.android.volley.ParseError;
@@ -6,6 +6,8 @@ import com.android.volley.Response;
 import com.android.volley.toolbox.HttpHeaderParser;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.github.ShinChven.lib.CommonLib.BuildConfig;
+import com.github.ShinChven.lib.CommonLib.Constants;
+import com.github.ShinChven.lib.CommonLib.utils.LogUtil;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -60,16 +62,16 @@ public class VolleyAllReturnJSONObjectRequest extends JsonObjectRequest {
         try {
             return Response.success(new JSONObject(origin), HttpHeaderParser.parseCacheHeaders(response));
         } catch (JSONException e) { //转换失败跳过
-            LogTool.printStackTrace(e);
+            LogUtil.printStackTrace(e);
         }
 
         // 将漂亮的字符串转成JSONObject
         try {
             Response<JSONObject> success = Response.success(new JSONObject(je), HttpHeaderParser.parseCacheHeaders(response));
-            LogTool.i("request", "响应内容为标准JSON。");
+            LogUtil.i("request", "响应内容为标准JSON。");
             return success;
         } catch (JSONException e) {  // 转换失败跳过
-            LogTool.printStackTrace(e);
+            LogUtil.printStackTrace(e);
         }
 
         // 自动构建JSONObject
@@ -79,7 +81,7 @@ public class VolleyAllReturnJSONObjectRequest extends JsonObjectRequest {
                 jo.put(AUTO_CONSTRUCTED_JSON_OBJECT, new JSONArray(je)); // 是则将其添加进JSONObject
             } catch (JSONException e) {
                 jo.put(AUTO_CONSTRUCTED_JSON_OBJECT, je); // 不是则将其字符串作为属性传入
-                LogTool.i("request", "响应内容为非标准JSON，做字符串处理。");
+                LogUtil.i("request", "响应内容为非标准JSON，做字符串处理。");
             }
             return Response.success(jo, HttpHeaderParser.parseCacheHeaders(response));
         } catch (JSONException var4) {
@@ -100,7 +102,7 @@ public class VolleyAllReturnJSONObjectRequest extends JsonObjectRequest {
         try {
             result = responseBody;
             StringBuilder sb = new StringBuilder(result);
-            LogTool.i("处理前：" + result);
+            LogUtil.i("处理前：" + result);
             if (sb.toString().substring(0, 2).equals("\"{")) {
                 sb.deleteCharAt(0);
                 sb.deleteCharAt(sb.length() - 1);
@@ -122,7 +124,7 @@ public class VolleyAllReturnJSONObjectRequest extends JsonObjectRequest {
             }
         }
         String responseString = result == null ? Constants.EMPTY : result;
-        LogTool.i(TAG_REQUEST, RESPONSE + responseString);
+        LogUtil.i(TAG_REQUEST, RESPONSE + responseString);
         return responseString;
     }
 }

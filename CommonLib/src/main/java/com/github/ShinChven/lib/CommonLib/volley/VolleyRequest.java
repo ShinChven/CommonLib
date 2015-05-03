@@ -1,9 +1,10 @@
-package com.github.ShinChven.lib.CommonLib.tool;
+package com.github.ShinChven.lib.CommonLib.volley;
 
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
+import com.github.ShinChven.lib.CommonLib.utils.LogUtil;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -30,11 +31,11 @@ public class VolleyRequest {
                     @Override
                     public void onResponse(JSONObject jsonObject) {
                         try {
-                            LogTool.i(VolleyAllReturnJSONObjectRequest.TAG_REQUEST,
+                            LogUtil.i(VolleyAllReturnJSONObjectRequest.TAG_REQUEST,
                                     VolleyAllReturnJSONObjectRequest.RESPONSE +
                                             jsonObject.toString(4));
                         } catch (JSONException e) {
-                            LogTool.printStackTrace(e);
+                            LogUtil.printStackTrace(e);
                         }
                         handler.onSuccess(jsonObject);
 

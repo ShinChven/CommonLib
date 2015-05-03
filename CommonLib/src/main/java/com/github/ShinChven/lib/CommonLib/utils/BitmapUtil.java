@@ -1,4 +1,4 @@
-package com.github.ShinChven.lib.CommonLib.tool;
+package com.github.ShinChven.lib.CommonLib.utils;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -17,7 +17,7 @@ import java.io.IOException;
 /**
  * Created by ShinChven on 2014/10/21.
  */
-public class BitmapTool {
+public class BitmapUtil {
     private static final String SCHEME_CONTENT = "content";
     private static final String SCHEME_FILE = "file";
 

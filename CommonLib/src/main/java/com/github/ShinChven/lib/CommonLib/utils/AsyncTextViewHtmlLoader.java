@@ -1,4 +1,4 @@
-package com.github.ShinChven.lib.CommonLib.tool;
+package com.github.ShinChven.lib.CommonLib.utils;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -89,7 +89,7 @@ public class AsyncTextViewHtmlLoader {
                     public Drawable getDrawable(String source) {
                         count = count + 1;
                         if (count > LIMBO) { // 这个工具并不完善，没有处理性能上的问题，先限制图片个数，保证不会oom
-                            LogTool.i("count", String.valueOf(count));
+                            LogUtil.i("count", String.valueOf(count));
                             return null;
                         }
 
@@ -102,7 +102,7 @@ public class AsyncTextViewHtmlLoader {
                         Bitmap bp = loader.loadImageSync(source);
                         Drawable drawable = new BitmapDrawable(context.getResources(), bp);
                         int width = htmlText.getMeasuredWidth();
-                        DisplayTool.DisplayMatrix matrix = DisplayTool.zoomWithWidth(width, bp.getWidth(), bp.getHeight());
+                        DisplayUtil.DisplayMatrix matrix = DisplayUtil.zoomWithWidth(width, bp.getWidth(), bp.getHeight());
                         drawable.setBounds(0, 0, matrix.width, matrix.height);
                         return drawable;
                     }

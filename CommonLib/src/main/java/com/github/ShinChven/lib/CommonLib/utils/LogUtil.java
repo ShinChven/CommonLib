@@ -1,4 +1,4 @@
-package com.github.ShinChven.lib.CommonLib.tool;
+package com.github.ShinChven.lib.CommonLib.utils;
 
 import android.util.Log;
 
@@ -6,13 +6,13 @@ import android.util.Log;
  * Created by ShinChven on 14/8/29. </p>
  * log 工具，使用此Log 工具可统一开启或者关闭打印log
  */
-public class LogTool {
+public class LogUtil {
 
     private static boolean enabled = false;
 
 
     public static void setEnabled(boolean enabled) {
-        LogTool.enabled = enabled;
+        LogUtil.enabled = enabled;
     }
 
     public static boolean isEnabled() {
@@ -31,7 +31,7 @@ public class LogTool {
      * 设置log 开关</p>
      * 建议在Application 中设置开启
      * <pre>
-     * LogTool.init(BuildConfig.DEBUG,"your_default_log_tag");
+     * LogUtil.init(BuildConfig.DEBUG,"your_default_log_tag");
      * </pre>
      *
      * @param enabled    是否开启log
@@ -42,7 +42,7 @@ public class LogTool {
         setDefaultTag(defaultTag);
     }
 
-    private static String DEFAULT_TAG = "LogTool";
+    private static String DEFAULT_TAG = "LogUtil";
 
     public static void i(String tag, String msg) {
         if (enabled) {

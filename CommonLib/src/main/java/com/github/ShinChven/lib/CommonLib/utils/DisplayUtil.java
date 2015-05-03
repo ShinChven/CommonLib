@@ -1,4 +1,4 @@
-package com.github.ShinChven.lib.CommonLib.tool;
+package com.github.ShinChven.lib.CommonLib.utils;
 
 import android.view.View;
 import android.view.ViewGroup;
@@ -6,7 +6,7 @@ import android.view.ViewGroup;
 /**
  * Created by ShinChven on 2014/10/31.
  */
-public class DisplayTool {
+public class DisplayUtil {
 
     /**
      * 将View 调整至目标高宽
@@ -57,7 +57,7 @@ public class DisplayTool {
         public DisplayMatrix(int width, int height) {
             this.width = width;
             this.height = height;
-            LogTool.i("DisplayMatrix", String.format("%s x %s", String.valueOf(width), String.valueOf(height)));
+            LogUtil.i("DisplayMatrix", String.format("%s x %s", String.valueOf(width), String.valueOf(height)));
         }
 
         /**

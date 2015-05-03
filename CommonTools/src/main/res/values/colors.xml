@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--this is not a google official teal_800 value-->
+    <color name="material_deep_teal_800_shinchven">#ff006a60</color>
+</resources>

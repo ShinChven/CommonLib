@@ -2,7 +2,8 @@
 <resources>
 
     <string name="app_name">CommonTools</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="hello_world">https://github.com/shinchven
+        shinchven@gmail.com</string>
     <string name="action_settings">Settings</string>
 
 </resources>

@@ -1,10 +1,11 @@
-package com.github.ShinChven.lib.CommonLib;
+package com.github.ShinChven.lib.CommonLib.tool;
 
 import com.android.volley.NetworkResponse;
 import com.android.volley.ParseError;
 import com.android.volley.Response;
 import com.android.volley.toolbox.HttpHeaderParser;
 import com.android.volley.toolbox.JsonObjectRequest;
+import com.github.ShinChven.lib.CommonLib.BuildConfig;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;

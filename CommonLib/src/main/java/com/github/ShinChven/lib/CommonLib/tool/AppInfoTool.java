@@ -1,4 +1,4 @@
-package com.github.ShinChven.lib.CommonLib;
+package com.github.ShinChven.lib.CommonLib.tool;
 
 import android.content.Context;
 import android.content.pm.PackageInfo;

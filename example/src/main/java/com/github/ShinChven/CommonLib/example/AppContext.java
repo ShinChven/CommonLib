@@ -1,7 +1,7 @@
 package com.github.ShinChven.CommonLib.example;
 
 import android.app.Application;
-import com.github.ShinChven.lib.CommonLib.LogTool;
+import com.github.ShinChven.lib.CommonLib.tool.LogTool;
 import com.github.ShinChven.lib.CommonLib.example.BuildConfig;
 
 /**

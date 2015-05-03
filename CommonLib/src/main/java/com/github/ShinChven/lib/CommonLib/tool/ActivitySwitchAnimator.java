@@ -1,6 +1,7 @@
-package com.github.ShinChven.lib.CommonLib;
+package com.github.ShinChven.lib.CommonLib.tool;
 
 import android.app.Activity;
+import com.github.ShinChven.lib.CommonLib.R;
 
 /**
  * Created by ShinChven on 14/8/19.

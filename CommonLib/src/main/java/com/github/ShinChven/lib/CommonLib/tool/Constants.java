@@ -1,4 +1,4 @@
-package com.github.ShinChven.lib.CommonLib;
+package com.github.ShinChven.lib.CommonLib.tool;
 
 /**
  * Created by ShinChven on 2014/10/27.

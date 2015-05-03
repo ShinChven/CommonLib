@@ -27,7 +27,7 @@ public class AESEncryptTool {
             return null;
         }
         if (sKey.length() != 16) {
-            System.out.print("AES_KEY 长度应该为16位");
+            LogTool.i(LOG_TAG, "AES_KEY 长度应该为16位");
             return null;
         }
         byte[] raw = sKey.getBytes("utf-8");
@@ -56,7 +56,7 @@ public class AESEncryptTool {
                 return null;
             }
             if (sKey.length() != 16) {
-                System.out.print("AES_KEY 长度应该为16位");
+                LogTool.i(LOG_TAG, "AES_KEY 长度应该为16位");
                 return null;
             }
             byte[] raw = sKey.getBytes("utf-8");
@@ -75,7 +75,7 @@ public class AESEncryptTool {
                 return null;
             }
         } catch (Exception ex) {
-            System.out.println(ex.toString());
+            LogTool.printStackTrace(ex);
             return null;
         }
     }

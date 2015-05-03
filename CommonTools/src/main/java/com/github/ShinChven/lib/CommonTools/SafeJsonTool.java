@@ -5,7 +5,9 @@ import org.json.JSONObject;
 /**
  * 安全地取出json
  * Created by ShinChven on 2014/9/19.
+ * 请使用JSONWrapper
  */
+@Deprecated
 public class SafeJsonTool {
 
     public static String getString(JSONObject obj, String key) {

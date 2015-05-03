@@ -3,7 +3,7 @@ package com.github.ShinChven.lib.CommonTools;
 import org.json.JSONObject;
 
 /**
- * 安全地取出json
+ * 安全地取出json，并可以设置默认值
  * Created by ShinChven on 2014/9/19.
  */
 public class JSONWrapper {

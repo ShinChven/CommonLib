@@ -1,6 +1,7 @@
 package com.github.ShinChven.lib.CommonLib.utils;
 
 import com.github.ShinChven.lib.CommonLib.Constants;
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 /**
@@ -64,15 +65,6 @@ public class JSONWrapper {
         }
     }
 
-    public Boolean getBoolean(String key) {
-        try {
-            return this.jo.getBoolean(key);
-        } catch (Exception e) {
-            LogUtil.printStackTrace(e);
-            return null;
-        }
-    }
-
     public double getDouble(String key) {
         try {
             return this.jo.getDouble(key);
@@ -106,6 +98,15 @@ public class JSONWrapper {
         } catch (Exception e) {
             LogUtil.printStackTrace(e);
             return defaultVal;
+        }
+    }
+
+    public JSONArray getJSONArray(String key){
+        try {
+            return this.jo.getJSONArray(key);
+        } catch (Exception e) {
+            LogUtil.printStackTrace(e);
+            return null;
         }
     }
 }

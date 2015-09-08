@@ -3,16 +3,12 @@ package com.github.ShinChven.lib.CommonLib.utils;
 import android.content.Context;
 import android.content.res.Resources;
 import android.database.Cursor;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.Matrix;
+import android.graphics.*;
 import android.media.ExifInterface;
 import android.net.Uri;
 import android.provider.MediaStore;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
+import java.io.*;
 
 /**
  * Created by ShinChven on 2014/10/21.
